@@ -5,7 +5,7 @@ import start.firstspringproject.domain.Member;
 
 import java.util.*;
 
-@Repository
+
 public class MemoryMemberRepository implements MemberRepository {
 
     private static final Map<Long, Member> store = new HashMap<>();

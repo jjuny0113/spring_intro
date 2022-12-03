@@ -1,8 +1,15 @@
 package start.firstspringproject.domain;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Member {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    // 시스템 id
     private String name;
 
     public Long getId() {
@@ -11,7 +18,6 @@ public class Member {
 
     public void setId(Long id) {
         this.id = id;
-
     }
 
     public String getName() {
@@ -21,4 +27,5 @@ public class Member {
     public void setName(String name) {
         this.name = name;
     }
+
 }
